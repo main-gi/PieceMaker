@@ -15,7 +15,7 @@
             padding: 0;
             margin: 0;
             background-color: rgba(51, 51, 51, 1);
-            overflow:scroll;
+            overflow: auto;
         }
 
         .infobar {
@@ -26,20 +26,23 @@
             width: calc(100vh / 8.75 * 3.55);
             position: absolute;
             left: 50%;
-            margin-left: calc(-100vh / 8.75 * 3.55 - .25rem);
+            top: 50%;
+            transform: translate(-100%, -50%);
+            margin-left:-.25rem;
 
             display: block;
         }
 
         .editor {
             display: block;
-            height: 100vh;
+            height: calc(100vh - 2em);
             width: calc(100vh / 8.75 * 3.55);
-            //margin-left: calc(100vh / 8.75 * 3.55 / 2 + .25rem);
-            margin-left:.25rem;
 
             position: absolute;
             left: 50%;
+            top: 50%;
+            transform: translate(0, -50%);
+            margin-left:.25rem;
 
             padding: .5em;
             background-color: #eee;
