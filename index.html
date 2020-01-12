@@ -50,8 +50,6 @@
             background-color: #eee;
             color: black;
             border-radius: .5rem;
-            border: solid gray;
-            border-width: 0 0 1px 2px;
         }
 
         .editor header {
@@ -85,11 +83,11 @@
         }
 
         .editor section.name {
-            width: 70%;
+            width: calc(100% - 2em - 3em - 1.25rem);
         }
 
         .editor section.blood {
-            width: 15.75%;
+            width: 3em;
         }
 
         .editor section textarea {
@@ -103,8 +101,8 @@
         }
 
         .editor section.passive {
-            width: calc(100% - 2.125rem);
             height: 8rem;
+            width:calc(100% - 2em);
         }
 
         .editor section select {
@@ -115,11 +113,11 @@
             border-width: 1px 2px 0 0;
         }
 
-        .editor selection passive {
+        .editor section passive {
             width: 50%;
         }
 
-        .editor selection rarity {
+        .editor section rarity {
             width: 50%;
         }
 
@@ -212,7 +210,6 @@
             <label for="imageIn" class="fileLabel">Upload Image</label>
             <input type="file" accept="image/*" id="imageIn">
         </section>
-        <br>
         <br>
         <header>
             Abilities
