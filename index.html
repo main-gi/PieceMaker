@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap" rel="stylesheet">
     <style>
         * {
-            font-size: 2vh;
+            font-size: 1.2vw;
             font-family: 'Roboto';
         }
 
@@ -15,6 +15,7 @@
             padding: 0;
             margin: 0;
             background-color: rgba(51, 51, 51, 1);
+            overflow-y: auto;
         }
 
         .infobar {
@@ -28,22 +29,22 @@
             top: 1em;
             transform: translate(-100%, 0);
             -webkit-transform: translate(-100%, 0);
-            margin-left:-.25rem;
+            margin-left: -.25rem;
 
             display: block;
         }
 
         .editor {
             display: block;
-            height: calc((30vw - 1em) / 3.55 * 8.75);
-            width: calc(30vw - 1em);
+            height: calc((30vw - 2.25em) / 3.55 * 8.75);
+            width: calc(30vw - 2.25em);
 
             position: absolute;
             left: 50%;
-            top:1em;
+            top: 3em;
             transform: translate(0, 0);
             -webkit-transform: translate(0, 0);
-            margin-left:.25rem;
+            margin-left: .25rem;
 
             padding: .5em;
             background-color: #eee;
@@ -84,11 +85,11 @@
         }
 
         .editor section.name {
-            width: 75%;
+            width: 70%;
         }
 
         .editor section.blood {
-            width: 13.75%;
+            width: 15.75%;
         }
 
         .editor section textarea {
@@ -103,7 +104,7 @@
 
         .editor section.passive {
             width: calc(100% - 2.125rem);
-            height: 5rem;
+            height: 8rem;
         }
 
         .editor section select {
@@ -142,9 +143,7 @@
             font-weight: 500;
         }
 
-        .editor section.hero {
-            width: 25%;
-        }
+        .editor section.hero {}
 
         .editor section.hero label[for=heroIn] {
             margin: 0 0 .25em 0;
@@ -176,7 +175,7 @@
         </section>
         <section class="passive">
             <label for="passiveIn">Passive</label><br>
-            <textarea id="passiveIn" rows="3" placeholder="Passive abilities."></textarea>
+            <textarea id="passiveIn" rows="5" placeholder="Passive abilities."></textarea>
         </section>
         <section class="type">
             <label for="typeIn">Type</label><br>
@@ -207,6 +206,7 @@
             <label for="moraleIn">Morale</label>
             <input type="text" placeholder="#" id="moraleIn" disabled>
         </section>
+        <br>
         <section class="image">
             <label for="imageIn">Image</label><br>
             <label for="imageIn" class="fileLabel">Upload Image</label>
