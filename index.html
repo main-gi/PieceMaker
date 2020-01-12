@@ -15,19 +15,19 @@
             padding: 0;
             margin: 0;
             background-color: rgba(51, 51, 51, 1);
-            overflow: auto;
         }
 
         .infobar {
             background-image: url(infoBoard.png);
             background-size: 100% auto;
             background-repeat: no-repeat;
-            height: 100vh;
-            width: calc(100vh / 8.75 * 3.55);
+            height: calc((30vw - 1em) / 3.55 * 8.75);
+            width: calc(30vw - 1em);
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(-100%, -50%);
+            top: 1em;
+            transform: translate(-100%, 0);
+            -webkit-transform: translate(-100%, 0);
             margin-left:-.25rem;
 
             display: block;
@@ -35,13 +35,14 @@
 
         .editor {
             display: block;
-            height: calc(100vh - 2em);
-            width: calc(100vh / 8.75 * 3.55);
+            height: calc((30vw - 1em) / 3.55 * 8.75);
+            width: calc(30vw - 1em);
 
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(0, -50%);
+            top:1em;
+            transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
             margin-left:.25rem;
 
             padding: .5em;
@@ -83,11 +84,11 @@
         }
 
         .editor section.name {
-            width: 60%;
+            width: 75%;
         }
 
         .editor section.blood {
-            width: 22.5%;
+            width: 13.75%;
         }
 
         .editor section textarea {
@@ -142,7 +143,7 @@
         }
 
         .editor section.hero {
-            width: 36%;
+            width: 25%;
         }
 
         .editor section.hero label[for=heroIn] {
@@ -150,7 +151,7 @@
         }
 
         .editor section.morale {
-            width: 40%;
+            width: 10%;
         }
 
         .editor section.hero input[type=text] {
