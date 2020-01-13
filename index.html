@@ -280,7 +280,7 @@
         <section class="image">
             <label for="imageIn">Image</label><br>
             <label for="imageIn" class="fileLabel">Upload Image</label>
-            <input type="file" accept="image/*" id="imageIn" onchange="loadFile(event, 'imageIn')">
+            <input type="file" accept="image/*" id="imageIn" onchange="readURL(this)")">
         </section>
         <br>
         <header>
@@ -305,5 +305,21 @@
             var image = document.getElementById(image);
             image.src = URL.createObjectURL(event.target.files[0]);
         };
+        
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        // Code jacked from https://codepen.io/waqasy/pen/rkuJf lmao
+
     </script>
 </body></html>
